@@ -1,11 +1,10 @@
 package org.pucit.ead;
 
-import org.pucit.drawable.Circle;
-import org.pucit.drawable.Rectangle;
-import org.pucit.drawable.Triangle;
-import java.awt.*;
-import java.awt.color.*;
-import static java.lang.Math.PI;
+//import org.pucit.drawable.Circle;
+//import org.pucit.drawable.Rectangle;
+//import org.pucit.drawable.Triangle;
+import org.pucit.drawable.*;
+//import static java.lang.Math.PI;
 import static java.lang.Math.*;
 
 public class Main {
@@ -24,6 +23,7 @@ public class Main {
 		c.onDrag();
 		t.onDrag();
 		System.out.println("Hello World");
+		System.out.println(PI);
 	}
 
 }
