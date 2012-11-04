@@ -140,7 +140,9 @@ public class CVBuilder extends HttpServlet {
 	}
 	
 	private ResultSet getCVs() throws ClassNotFoundException, SQLException{
-	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+//	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+//		This Line no more needed read link below JDBC 4.0 Features heading
+//		http://onjava.com/pub/a/onjava/2006/08/02/jjdbc-4-enhancements-in-java-se-6.html
 	    Connection con = DriverManager.getConnection("jdbc:odbc:JDBCDemo", "root", "root");
 	    String query = "SELECT * FROM CV";
 	    Statement statement = con.createStatement();
