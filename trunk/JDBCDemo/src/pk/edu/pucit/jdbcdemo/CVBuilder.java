@@ -141,7 +141,7 @@ public class CVBuilder extends HttpServlet {
 	
 	private ResultSet getCVs() throws ClassNotFoundException, SQLException{
 	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-	    Connection con = DriverManager.getConnection("jdbc:odbc:MySQL", "root", "root");
+	    Connection con = DriverManager.getConnection("jdbc:odbc:JDBCDemo", "root", "root");
 	    String query = "SELECT * FROM CV";
 	    Statement statement = con.createStatement();
 	    ResultSet rs = statement.executeQuery(query);
