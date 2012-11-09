@@ -127,8 +127,8 @@ public class CVBuilder extends HttpServlet {
 	}
 	
 	private void saveCV(String jdbcType, String name, String email, String occupation, String education) throws ClassNotFoundException, SQLException{
-	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-	    Connection con = DriverManager.getConnection("jdbc:odbc:MySQL", "root", "root");
+//	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+	    Connection con = DriverManager.getConnection("jdbc:odbc:JDBCDemo", "root", "root");
 	    String query = "INSERT INTO CV (name, email, occupation, education) VALUES (?, ?, ?, ?)";
 	    PreparedStatement preparedStatement = con.prepareStatement(query);
 	    preparedStatement.setString(1, name);
