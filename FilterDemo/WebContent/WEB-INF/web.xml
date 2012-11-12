@@ -9,6 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
   <filter>
     <filter-name>AuthenticationManager</filter-name>
     <filter-class>pk.edu.pucit.filterdemo.AuthenticationManager</filter-class>
@@ -17,8 +18,32 @@
       <param-value>127.0.0.1,localhost,0.0.0.0,0:0:0:0:0:0:0:1</param-value>
     </init-param>
   </filter>
+
+  <servlet>
+  	<servlet-name>CVBuilder</servlet-name>
+  	<servlet-class>pk.edu.pucit.filterdemo.CVBuilder</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HitCountView</servlet-name>
+  	<servlet-class>pk.edu.pucit.filterdemo.HitCountView</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CVBuilder</servlet-name>
+  	<url-pattern>/CVBuilder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HitCountView</servlet-name>
+  	<url-pattern>/HitCountView</url-pattern>
+  </servlet-mapping>
+
   <filter-mapping>
     <filter-name>AuthenticationManager</filter-name>
-    <url-pattern>/*</url-pattern>
+    <servlet-name>CVBuilder</servlet-name>
   </filter-mapping>
+  <filter-mapping>
+    <filter-name>AuthenticationManager</filter-name>
+    <servlet-name>HitCountView</servlet-name>
+  </filter-mapping>  
+
 </web-app>
