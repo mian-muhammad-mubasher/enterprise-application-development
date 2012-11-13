@@ -13,6 +13,7 @@
 <tr><th>Email</th><td><%= request.getParameter("email") %></td></tr>
 <tr><th>Education</th><td><%= request.getParameter("education") %></td></tr>
 <tr><th>Occupation</th><td><%= request.getParameter("occupation") %></td></tr>
+<tr><th>Occupation</th><td><%= 2+2 %></td></tr>
 </table>
 </body>
 </html>
