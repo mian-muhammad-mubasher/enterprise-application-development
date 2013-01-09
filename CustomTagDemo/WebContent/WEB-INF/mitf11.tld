@@ -1,0 +1,37 @@
+<taglib xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="2.1">  
+   <tlib-version>1.1</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>New Year</short-name>
+  <tag>
+    <name>CustomSelect</name>
+    <tag-class>pk.edu.pucit.demo.ct.CustomSelectTag</tag-class>
+    <body-content>scriptless</body-content>
+    <dynamic-attributes>true</dynamic-attributes>  
+  </tag>
+  <tag>
+  	<name>FragmentDemoTag</name>
+    <tag-class>pk.edu.pucit.demo.ct.MyFragmentTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+    	<name>html</name>
+    	<fragment>true</fragment>
+    </attribute>
+    <attribute>
+    	<name>count</name>
+    	<required>true</required>
+    </attribute>
+  </tag>
+  <tag>
+    <name>CustomOuterTag</name>
+    <tag-class>pk.edu.pucit.demo.ct.CustomOuterTag</tag-class>
+    <body-content>scriptless</body-content>  
+  </tag>
+  <tag>
+    <name>CustomInnerTag</name>
+    <tag-class>pk.edu.pucit.demo.ct.CustomInnerTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+</taglib>
