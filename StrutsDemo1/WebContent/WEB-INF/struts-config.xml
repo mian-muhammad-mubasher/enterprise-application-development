@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+  "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <!-- Form Beans Configuration -->
+  <form-beans>
+    <form-bean name="searchForm"
+               type="pk.edu.pucit.ead.demo.struts.view.SearchForm"/>
+  </form-beans>
+
+  <!-- Global Forwards Configuration -->
+  <global-forwards>
+    <forward name="search" path="/search.jsp"/>
+  </global-forwards>
+
+  <!-- Action Mappings Configuration -->
+  <action-mappings>
+    <action path="/search"
+            type="pk.edu.pucit.ead.demo.struts.controller.SearchAction"
+            name="searchForm"
+            scope="request"
+            validate="true"
+            input="/search.jsp">
+    </action>
+  </action-mappings>
+
+  <!-- Message Resources Configuration -->
+  <message-resources
+    parameter="pk.edu.pucit.ead.demo.struts.conf.ApplicationResources"/>
+
+</struts-config>
